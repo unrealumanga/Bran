@@ -8,23 +8,40 @@ Are you trying to use advanced CLI agents like **Claude Code**, **OpenCode**, or
 
 **Bran (God Mode)** solves this instantly.
 
-By dropping a single, highly-optimized XML file into your workspace, you inject a strict, zero-tolerance "Principal Engineer" persona directly into your AI. The result? A hyper-focused agent that natively understands modern tech stacks, enforces Test-Driven Development, and mandates the fastest build tools on earth.
+By dropping a single, highly-optimized `CLAUDE.md` file (powered by strict XML tags) into your workspace, you inject a strict, zero-tolerance "Principal Engineer" persona directly into your AI. The result? A hyper-focused agent that natively understands modern tech stacks, enforces Test-Driven Development, and mandates the fastest build tools on earth.
 
 ## 🧪 Case Study: Bran + Claude Code + Local Aria Models
-Want to run Claude Code locally for **$0/month** without sacrificing reasoning quality? 
+Want to run an elite Polyglot Architect locally for **$0/month**? 
 
 We paired the **Bran (God Mode)** XML prompt with [Aria RAG Harness](https://github.com/unrealumanga/Aria) (specifically the `aria-qwen9b` model running locally on Ollama). 
 
-**The Result:**
-Because Bran forces strict, XML-based reasoning frameworks, the local Qwen 9B model performed like a massive 70B parameter model. It bypassed conversational fluff, natively utilized `<think>` blocks in the terminal, and successfully simulated Anthropic's tool-calling logic directly from `localhost:11434`. 
+**The Test (A Mid-Weight Polyglot Task):**
+We tested the agent's ability to reason about high-performance hybrid codebases (Python + Rust FFI).
 
 ```bash
-# Run Claude Code 100% locally with Bran + Aria!
 export ANTHROPIC_API_KEY="sk-local"
 export ANTHROPIC_BASE_URL="http://127.0.0.1:11434"
 
-claude -p "Refactor this python script to use Rust via PyO3" --model aria-qwen9b:latest
+claude -p "Explain how we bridge Rust and Python for high-performance computation in our stack." --model aria-qwen9b:latest
 ```
+
+**The Result (Raw Output):**
+Because Bran forces strict, elite-level architectural reasoning (`<rule_python_rust>`), the local 9B model completely bypassed conversational fluff and delivered a Staff-Engineer level breakdown:
+
+```text
+<think>
+The user is asking for an architectural explanation of our Python-Rust bridge. Per the <elite_build_tools> directives, we use PyO3 and Maturin for this. I must provide a direct, technical explanation without conversational filler.
+</think>
+
+We bridge Rust and Python using **PyO3** and **Maturin** to achieve native performance:
+
+1. **FFI Bindings (PyO3)**: We use Rust's `#[pyfunction]` and `#[pyclass]` macros. PyO3 automatically handles the translation between Rust types and Python objects (e.g., `Vec<f64>` to NumPy arrays) and manages the Python Global Interpreter Lock (GIL).
+2. **Build System (Maturin)**: Instead of complex CMake setups, we use Maturin as the build backend in `pyproject.toml`. It compiles the Rust code into a native Python extension wheel (`.pyd` on Windows, `.so` on Linux).
+3. **Environment (uv)**: We manage the installation of these hybrid wheels instantly using `uv` instead of standard `pip`.
+
+This allows us to write heavy compute logic (like tensor processing or complex trading indicators) in memory-safe, concurrent Rust, while orchestrating it effortlessly from Python.
+```
+*(Notice the native `<think>` block, the strict adherence to the Bran toolchain directives, and the complete absence of "Here is your explanation" fluff!)*
 
 ## ✨ Features
 
